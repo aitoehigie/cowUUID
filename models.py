@@ -10,5 +10,5 @@ class UUID(Base):
     id = Column(name="id", type_=Integer, primary_key=True, unique=True, index=True)
     uuid = Column(name="uuid", type_=String, index=True)
     timestamp = Column(
-        name="timestamp", type=DateTime(timezone=True), server_default=func.now()
+        name="timestamp", type_=DateTime(timezone=True), server_default=func.now()
     )
