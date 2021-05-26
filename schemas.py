@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from datetime import datetime
+from uuid import UUID
 from typing import List
 
 from pydantic import BaseModel
@@ -7,7 +8,6 @@ from pydantic import BaseModel
 
 class BaseUUID(BaseModel):
     uuid: str
-    timestamp: datetime
 
 
 class CreateUUID(BaseUUID):
