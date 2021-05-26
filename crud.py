@@ -15,7 +15,8 @@ def create_uuid(db: Session, uuid: schemas.CreateUUID):
 
 
 def read_uuids(db: Session, skip: int = 0, limit: int = 100):
-    db_uuid = db.query(models.UUID).offset(skip).limit(limit).all()
+    db_uuid = db.query(models.UUID).order_by(
+        models.UUID.id.desc()).offset(skip).limit(limit).all()
     if not db_uuid:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="No UUID's found!"
