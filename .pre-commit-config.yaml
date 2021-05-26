@@ -24,26 +24,20 @@ repos:
   hooks:
   - id: mypy
 
-- repo: https://github.com/ambv/black
-  rev: 21.5b1
-  hooks:
-  - id: black
-    language_version: python3.7
-
 - repo: https://github.com/pre-commit/mirrors-autopep8
   rev: v1.5.7
   hooks:
   - id: autopep8
 
-- repo: https://github.com/pre-commit/mirrors-isort
-  rev: v5.8.0
-  hooks:
-  - id: isort
+#- repo: https://github.com/pre-commit/mirrors-isort
+  #rev: v5.8.0
+  #hooks:
+  #- id: isort
 
-- repo: https://gitlab.com/pycqa/flake8
-  rev: 3.9.2
-  hooks:
-  - id: flake8
+#- repo: https://gitlab.com/pycqa/flake8
+  #rev: 3.9.2
+  #hooks:
+  #- id: flake8
 
 - repo: https://github.com/pre-commit/pygrep-hooks
   rev: v1.8.0
@@ -76,3 +70,10 @@ repos:
     hooks:
     -   id: detect-aws-credentials
     -   id: detect-private-key
+
+#- repo: https://github.com/ambv/black
+  #rev: 21.5b1
+  #hooks:
+  #- id: black
+    #language_version: python3.7
+
